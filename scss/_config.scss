@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat');
 
-$primary-color: #444;
+$primary-color: #000;
 $secondary-color: #B30000;
 $show-home-image: true;
 $home-image: url('../img/background.jpg');
@@ -30,6 +30,16 @@ $background-opacity: 0.5;
     }
 }
 
+//set text color
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+      @return #000;
+    } @else {
+      @return #fff;
+    }
+  }
+
+  
 @mixin mediaSm {
     @media screen and (max-width: 500px) {
         @content;
