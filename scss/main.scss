@@ -27,6 +27,11 @@ h1, h2, h3 {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
         background: rgba(lighten($primary-color, 2), 0.5);
+        
+        .txt-type > .txt {
+            border-right: 0.2rem solid #fff;
+        }
+    
     }
 }
 ul li {
@@ -106,7 +111,11 @@ main {
   }
 
     .hide-loader {
-        animation: fadeOut 11s;
+        animation: fadeOut 9s;
+        animation-fill-mode: forwards;
+        }
+    .hide-btn {
+        animation: fadeOut 1s;
         animation-fill-mode: forwards;
         }
         @keyframes fadeOut {
@@ -220,3 +229,106 @@ width: 100%;
   -webkit-transform-origin: left center;
   transform-origin: left center;
 }
+ 
+//terminal
+.window {
+    width : 600px ; 
+    background: rgba(darken($primary-color, 2), 0.5);
+    height : 350px ; 
+    border-radius : 5px ;
+    display : relative ; 
+    box-shadow: 10px 10px 10px  rgba(darken($primary-color, 2), 2);
+  }
+  
+  .afterclose {
+      background: rgba(lighten($primary-color, 2), 0.5);
+      display: none  ; 
+      text-align: center  ; 
+  }
+  
+  .open {
+      color : #fff ; 
+      padding : 15px ; 
+      background: #2ecc71 ; 
+      border-radius: 4px ; 
+      border: none ; 
+  }
+  
+  .bash {
+    width : 600px ; 
+    border: 1px solid rgba(lighten($primary-color, 2), 0.3);
+    height : 310px ; 
+    border-radius : 5px ;
+    top: 40px;
+    display : absolute; 
+    color : #fff ;
+  }
+  
+  /* effected by controllers */
+  
+  .windowmax {
+    width : 100% ; 
+    margin : auto ; 
+    background: rgba(lighten($primary-color, 2), 0.5);
+    height : 1000px; 
+    border-radius : 5px ;
+    display : relative ; 
+  }
+  
+  .windowmin {
+    width : 300px ; 
+    height : 45px ;
+    background: rgba(lighten($primary-color, 2), 0.5);
+    border-radius : 5px ; 
+    bottom : 0 ; 
+    position: fixed;
+  }
+  
+  .bashmax {
+    display : absolute ; 
+    width : 100% ; 
+    background : #34495e; 
+    height : 960px ; 
+    border-radius : 5px ;
+    bottom: 0;
+    color : #fff ;
+  }
+  
+  /* !--end--! */
+  
+  .buttons {
+    width : 15px ;
+    height : 15px ; 
+    border-radius : 50% ;
+    float : right ; 
+    margin : 13px 4px;
+    border: none ; 
+  }
+  
+  .close-term {
+    background : #e74c3c ;
+  }
+  
+  .maximize{
+    background : #f1c40f ;
+  }
+  
+  .minimize{
+    background : #2ecc71 ;
+  }
+  
+  .result {
+    display : none ;
+  }
+  
+  .controls {
+    height : 40px ; 
+    top : 0 ; 
+  }
+  
+  .title {
+      color : #fff ; 
+      font-weight: bold ; 
+      padding : 10px;
+  }
+  
