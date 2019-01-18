@@ -1,5 +1,3 @@
-const btnPlay = document.querySelector('.btn-play');
-const loader = document.querySelector('.loader');
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
@@ -10,25 +8,7 @@ const navItems = document.querySelectorAll('.nav-item');
 
 let showMenu = false;
 let showPage = false;
-
-const audio = document.getElementById("audio");
-
-btnPlay.addEventListener('click', togglePage);
-
-
 menuBtn.addEventListener('click', toggleMenu);
-
-function togglePage() {
-    if(!showPage) {
-        loader.classList.add('hide-loader');
-        btnPlay.classList.add('hide-btn');
-        showMenu = true;
-        audio.play();
-        onloadPage();
-    } else {
-        
-    }
-};
 
 
 function toggleMenu() {
@@ -98,13 +78,8 @@ typeWriter.prototype.type = function() {
     }
 
     setTimeout(() => this.type(), typeSpeed)
-}
-
-
-function onloadPage() {
-    setTimeout(init, 12000);
 };
-
+document.addEventListener("DOMContentLoaded", init);
 
 function init() {
     const txtElement = document.querySelector('.txt-type');

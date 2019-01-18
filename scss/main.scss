@@ -79,52 +79,6 @@ main {
     }
 }
 
-//Starting page
-.loader {
-    position: fixed;
-    z-index: 99;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    display: flex;
-    justify-content: center;
-    
-    .btn-play {
-        width: 100px;
-        height: 50px;
-        margin-top: 50vh;
-        background-color: $primary-color;
-        border: solid 3px #fff;
-        color: #fff;
-        font-family: 'Crimson Text', serif;
-        font-weight: 400;
-        font-size: 25px;
-        cursor: pointer;
-        &:hover {
-            color: $secondary-color;
-            border: solid 3px  $secondary-color;
-            @include easeOut;
-        }
-    }    
-  }
-
-    .hide-loader {
-        animation: fadeOut 9s;
-        animation-fill-mode: forwards;
-        }
-    .hide-btn {
-        animation: fadeOut 1s;
-        animation-fill-mode: forwards;
-        }
-        @keyframes fadeOut {
-            100% {
-                opacity: 0;
-                visibility: hidden;
-            }
-}
-
 //Footer
 
 .footer {
@@ -232,6 +186,7 @@ width: 100%;
  
 //terminal
 .window {
+    font-family: 'Ubuntu Mono', monospace;
     width : 600px ; 
     background: rgba(darken($primary-color, 2), 0.5);
     height : 350px ; 
@@ -332,3 +287,14 @@ width: 100%;
       padding : 10px;
   }
   
+  .textarea-terminal {
+    background: transparent;
+    color: white;
+    resize: none;
+    border: 0 none;
+    width: 100%;
+    font-size: 1.3em;
+    outline: none;
+    height: 100%;
+    position: absolute;
+  }
